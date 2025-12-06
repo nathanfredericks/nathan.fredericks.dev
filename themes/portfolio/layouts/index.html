@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="header relative flex h-screen flex-col items-center justify-center bg-slate-900 px-5 py-10">
+  <div class="relative md:mb-10">
+    <img alt="{{ .Params.profile.alt }}" loading="lazy" width="256" height="256" decoding="async"
+      class="rounded-full shadow-sm md:h-64 md:w-64" src="{{ .Params.profile.image }}">
+    <div class="absolute right-0 bottom-0 text-7xl md:text-8xl">{{ .Params.profile.emoji }}</div>
+  </div>
+  <h1 class="my-5 max-w-(--breakpoint-lg) text-center text-3xl text-white md:mb-10 lg:text-4xl">
+    <span class="underline">{{ .Params.intro.greeting }}</span> {{ .Params.intro.description }}
+  </h1>
+  <div class="flex flex-row flex-wrap justify-center">
+    {{ range .Params.social }}
+    <a href="{{ .url }}" {{ if hasPrefix .url "http" }}target="_blank" {{ end }}
+      class="mx-2 mt-3 rounded-md border-slate-900 bg-white px-5 py-2.5 text-center font-mono text-slate-900 shadow-sm transition duration-300 ease-in-out hover:-translate-y-0.5 hover:bg-slate-100 focus:ring-4 focus:ring-gray-200 focus:outline-hidden md:px-6 md:py-3">
+      <div class="inline-flex items-center">
+        <span>{{ .name }}</span>
+        <i class="{{ .icon }} ml-2 text-xl" aria-hidden="true"></i>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</header>
+{{ end }}
