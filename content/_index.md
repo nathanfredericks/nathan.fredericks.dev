@@ -2,7 +2,7 @@
 title: "Nathan Fredericks | Computer Science student"
 
 profile:
-  image: "/me.jpg"
+  image: "/me.webp"
   alt: "Headshot of Nathan Fredericks"
   emoji: "👋"
 
