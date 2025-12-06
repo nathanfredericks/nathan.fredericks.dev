@@ -13,8 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install npm dependencies
+        uses: docker://hugomods/hugo:std-node-lts-0.152.2
+        with:
+          args: npm install
+
       - name: Build Hugo site
-        uses: docker://hugomods/hugo:base-0.152.2
+        uses: docker://hugomods/hugo:std-node-lts-0.152.2
         with:
           args: --minify
 
