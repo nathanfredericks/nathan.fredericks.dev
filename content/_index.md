@@ -11,9 +11,9 @@ intro:
   description: "I'm a Computer Science student at Acadia University."
 
 social:
-  - name: "Codeberg"
-    url: "https://codeberg.org/nathanfredericks"
-    icon: "fa-brands fa-git-alt"
+  - name: "GitHub"
+    url: "https://github.com/nathanfredericks"
+    icon: "fa-brands fa-github"
   - name: "LinkedIn"
     url: "https://www.linkedin.com/in/nathanfredericks/"
     icon: "fa-brands fa-linkedin"
